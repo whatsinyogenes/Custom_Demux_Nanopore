@@ -149,7 +149,7 @@ General options:
 
   --threads N
         Number of threads.
-        Default: 16
+        Default: 4
 
   --dorado PATH
         Dorado executable.
@@ -188,7 +188,7 @@ Fastplong:
 
   --min-length N
         Minimum retained read length.
-        Default: 75
+        Default: 50
 
 
 Alignment:
