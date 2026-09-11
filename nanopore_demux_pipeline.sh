@@ -104,11 +104,11 @@ OUTPUT=""
 usage() {
     cat <<'EOF'
 
-STARR_process_pipeline
+Nano_process_pipeline
 
 Usage:
 
-  bash STARR_process_pipeline \
+  bash Nano_process_pipeline \
       --input FASTQ_OR_DIRECTORY \
       --indexes INDEX_CSV \
       --samples SEQUENCING_MANIFEST_TSV \
@@ -258,13 +258,13 @@ Help:
 
 Example:
 
-  bash STARR_process_pipeline \
+  bash Nano_process_pipeline \
       --input fastqs/ \
       --indexes tagmentation_index_manifest_v2.csv \
       --samples sequencing_manifest.tsv \
       --reference hg38.fa \
       --adapters adaptors_for_fastplong.fasta \
-      --output STARR_processed/
+      --output Nano_processed/
 
 EOF
 }
@@ -1265,7 +1265,7 @@ PY
 
 
     generate_toml \
-        "STARR_I7_F" \
+        "Nano_I7_F" \
         "${destination_tomls}/i7_F.toml" \
         "$n" \
         "$I7_FRONT" \
@@ -1273,7 +1273,7 @@ PY
 
 
     generate_toml \
-        "STARR_I7_REV" \
+        "Nano_I7_REV" \
         "${destination_tomls}/i7_REV.toml" \
         "$n" \
         "$I7_FRONT" \
@@ -1281,13 +1281,13 @@ PY
 
 
     generate_toml_i5 \
-        "STARR_I5_F" \
+        "Nano_I5_F" \
         "${destination_tomls}/i5_F.toml" \
         "$n"
 
 
     generate_toml_i5 \
-        "STARR_I5_REV" \
+        "Nano_I5_REV" \
         "${destination_tomls}/i5_REV.toml" \
         "$n"
 
@@ -1446,7 +1446,7 @@ run_production_demux() {
 
 
     run_dorado_pass \
-        "STARR_I7_F" \
+        "Nano_I7_F" \
         "${TOMLS}/i7_F.toml" \
         "${FASTAS}/i7_F.fasta" \
         "$PRODUCTION_INPUT" \
@@ -1475,7 +1475,7 @@ run_production_demux() {
 
 
     run_dorado_pass \
-        "STARR_I7_REV" \
+        "Nano_I7_REV" \
         "${TOMLS}/i7_REV.toml" \
         "${FASTAS}/i7_REV.fasta" \
         "$input2" \
@@ -1504,7 +1504,7 @@ run_production_demux() {
 
 
     run_dorado_pass \
-        "STARR_I5_F" \
+        "Nano_I5_F" \
         "${TOMLS}/i5_F.toml" \
         "${FASTAS}/i5_F.fasta" \
         "$input3" \
@@ -1533,7 +1533,7 @@ run_production_demux() {
 
 
     run_dorado_pass \
-        "STARR_I5_REV" \
+        "Nano_I5_REV" \
         "${TOMLS}/i5_REV.toml" \
         "${FASTAS}/i5_REV.fasta" \
         "$input4" \
@@ -2075,7 +2075,7 @@ generate_summary() {
 
 log ""
 log "============================================================"
-log "STARR-seq nanopore pipeline"
+log "Nano Demux Pipeline"
 log "============================================================"
 log ""
 log "Input:"
@@ -2207,7 +2207,7 @@ fi
 
 log ""
 log "============================================================"
-log "STARR PIPELINE COMPLETE"
+log "Nano Demux PIPELINE COMPLETE"
 log "============================================================"
 log ""
 log "Output:"
