@@ -8,6 +8,8 @@ A simple bash pipeline for demultiplexing Illumina derived unique dual index "ID
   <img src="/Custom_demux.jpg" width="1000">
 </p>
 
+chatgpt^^
+
 Usage:
 
   bash Nano_process_pipeline \
