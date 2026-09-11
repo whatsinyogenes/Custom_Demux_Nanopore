@@ -4,7 +4,7 @@ set -Eeuo pipefail
 
 
 ###############################################################################
-# STARR-seq nanopore processing pipeline
+# nanopore custom demultiplexing pipeline
 #
 # Workflow:
 #
@@ -34,13 +34,14 @@ MINIMAP2="minimap2"
 SAMTOOLS="samtools"
 PYTHON="python3"
 
-THREADS=16
+THREADS=4
 
 FASTPLONG_PASSES=3
 DISTANCE_THRESHOLD="0.10"
 TRIMMING_EXTENSION=0
-MIN_LENGTH=75
+MIN_LENGTH=50
 
+#change minimap preset if for longreads etc 
 MINIMAP2_PRESET="sr"
 
 # Pipeline controls
